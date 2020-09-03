@@ -68,6 +68,7 @@ class mainWindow(QWidget):
         self.ui.saveButton.setText('Saving successfull, click agian to save')
 
     def delFn(self):
+        os.remove(os.path.join(self.dir_path, self.anno_list[self.index][0]))
         del(self.anno_list[self.index])
         self.updateFrame()
     
